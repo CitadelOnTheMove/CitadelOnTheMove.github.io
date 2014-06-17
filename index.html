@@ -19,15 +19,17 @@
       
       <header>
         <h1 class="header">Citadel on the Move</h1>
-        <p class="header">Citadel helps you use <strong>Open Data</strong> to create <strong>Mobile Apps</strong> that make your city a smarter place to live</p>
+        <p class="header">helps you use <strong>Open Data</strong> to create <strong>Mobile Apps</strong> that make your city a smarter place to live</p>
         <ul>
           <li><a class="buttons github" href="https://github.com/CitadelOnTheMove">GitHub Profile</a></li>
-          <li><a class="buttons " href="http://www.citadelonthemove.eu/">Community website</a></li>
+          <li><a class="buttons " href="http://www.citadelonthemove.eu/">Website</a></li>
         </ul>
       </header>
       
       <nav>
-        
+        <a href="quickstart">Get started</a>
+        <a href="examples">Examples</a>
+        <a href="community">Community</a>
       </nav>
       
       <section>
@@ -58,43 +60,7 @@
 </ol>
 
 
-<h2><a name="github" class="anchor" href="#github"><span class="octicon octicon-link"></span></a><i class="fa fa-graduation-cap"></i> How to use the Github repositories</h2>
-<h3>The mobile application templates</h3>
-<p>these templates are meant to be forked and used to quickly deploy mobile applications. They are build on HTML5 and use the Citadel JSON file format. Most templates will work "out-ofthe-box" with none or very few changes. You are encouraged to build application upon them, and of course contribute back your improvements so they can benefit other people. The various templates demonstrate various uses of the mobile applications, and implement several functionnalities. Most templates use static JSON files, but can be set to use live data and/or a database</p>
-<ul>
-	<li><a href="https://github.com/CitadelOnTheMove/Citadel-Pois-Template" target=_new><i class="fa fa-icon-external-link"></i> POIs template</a> : use this template to display POI (Points Of Interest = places) on a map. Different categories can be used so the user can switch between the different categories that are displayed on the map.</li>
-	<li><a href="https://github.com/CitadelOnTheMove/Citadel-Parkings-Template" target=_new><i class="fa fa-icon-external-link"></i> Parkings template</a> : use this template to display live parking data, including their location, and the number of parkings left.</li>
-	<li><a href="https://github.com/CitadelOnTheMove/Citadel-Events-Template" target=_new><i class="fa fa-icon-external-link"></i> Events template</a> : use this template to display events. This template provides a calendar filter so events can be filtered by proximity and by date and time.</li>
-	<li><a href="https://github.com/CitadelOnTheMove/Citadel-Environmental-Template" target=_new><i class="fa fa-icon-external-link"></i> Environnemental template</a> : use this template if you wish to display live sensor data such as temperature, live air analysis, etc. [currently uses Xively for the sensor interface]</li>
-	<li><a href="https://github.com/CitadelOnTheMove/Citadel-Crowd-sourcing-Template" target=_new><i class="fa fa-icon-external-link"></i> Crowd-sourcing template</a> : use this template if you want thet app users to add new data to your dataset. [requires a database]</li>
-</ul>
-<h3>The Application Generator Tool (AGT)</h3>
-<p>this tools makes it easy to build an app without any technical skill. It is the source code of the tool that is available on Citadel platform.</p>
-<h3>The Data converter : converts CSV or Excel files to Citadel JSON files that are ready to be used into application templates</h3>
-<ul>
-	<li>Converter library (java)</li>
-	<li>Converter GUI (java)</li>
-	<li>Converter portlet (Liferay, java)</li>
-</ul>
-<br />
-<br />
-
-<h2><a name="samples" class="anchor" href="#samples"><span class="octicon octicon-link"></span></a><i class="fa fa-table"></i> Spreadsheet samples / template files</h2>
-<p>These templates files can be used to structure your data. It indicates the mandatory and optionnal fields that you need to put into the file so it can produce a valid and usable JSON file through the Converter.</p>
-<p>Note : if you're experiencing troubles with accents, please check your file is encoded in UTF8.</p>
-<ul>
-<li>POIs template : CSV, XLS, Citadel-JSON</li>
-<li>Remarkable trees template : CSV, XLS, Citadel-JSON</li>
-<li>Parking template : CSV, XLS, Citadel-JSON</li>
-<li>Events template : CSV, XLS, Citadel-JSON</li>
-<li>...</li>
-</ul>
-<br />
-<br />
-
-
-
-<h2><a name="tutorials" class="anchor" href="#tutorials"><span class="octicon octicon-link"></span></a><i class="fa fa-check-square-o"></i> Use case, examples, tutorials, and stories</h2>
+<h2><a name="examples" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a><i class="fa fa-check-square-o"></i> Use case, examples, tutorials, and stories</h2>
 <h3>Use case</h3>
 <ul>
 	<li>...</li>
@@ -112,6 +78,16 @@
 	<li>Tutorial 4 : fork and customize an applicaiton template</li>
 	<li>...</li>
 </ul>
+<h3>Spreadsheet samples / template files</h3>
+<p>These templates files can be used to structure your data. It indicates the mandatory and optionnal fields that you need to put into the file so it can produce a valid and usable JSON file through the Converter.</p>
+<p>Note : if you're experiencing troubles with accents, please check your file is encoded in UTF8.</p>
+<ul>
+<li>POIs template : CSV, XLS, Citadel-JSON</li>
+<li>Remarkable trees template : CSV, XLS, Citadel-JSON</li>
+<li>Parking template : CSV, XLS, Citadel-JSON</li>
+<li>Events template : CSV, XLS, Citadel-JSON</li>
+<li>...</li>
+</ul>
 <h3>Stories</h3>
 <ul>
 	<li>How mobile apps where build in Athens, Ghent, Issy, Manchester,...</li>
@@ -121,32 +97,62 @@
 <br />
 
 
-<h2><a name="community" class="anchor" href="#community"><span class="octicon octicon-link"></span></a><i class="fa fa-users"></i> Contribute !</h2>
-<p>Citadel is looking for your feedbacks, use case, stories, and to hear about anything that you have made with our tools ! Please use the following channels to get in touch with us:</p>
+<h2><a name="ressources" class="anchor" href="#ressources"><span class="octicon octicon-link"></span></a><i class="fa fa-book"></i> Ressources, templates and documentation</h2>
+<h3>Project history and details</h3>
 <ul>
-<li>The <strong>Citadel Community</strong> is hosted on the <a href="http://www.citadelonthemove.eu/">Citadel on the Move website</a>. It's a public ressource, but you'll need to create a account to contribute.
-	<ul>
-		<li><a href="http://www.citadelonthemove.eu/en-us/exploremycitadel/talktothecommunity.aspx">Use the forum to discuss</a> about the AGT, applicaiton or data templates, or anything related to the Citadel project itself</li>
-		<li><a href="http://www.citadelonthemove.eu/en-us/exploremycitadel/askaquestion.aspx">Ask a question</a> and vote for relevant answers</li>
-		<li><a href="http://www.citadelonthemove.eu/en-us/exploremycitadel/talktothecommunity.aspx">Ask for help</a> and help us improve the FAQ</li>
-	</ul>
-</li>
-<li><strong>Feedbacks and technical issues</strong> can be submitted through the Github Issues tool : select the relevant repository, and submit your issue / enhancement / feature request.</li>
-<li>We love to hear from your <strong>experiences and stories with Citadel</strong> : feel free to send us your links to blog post, mobile applications or other stuff you've made with Citadel through one or more of the following channels :
-	<ul>
-		<li>Share a link with our <a href="https://twitter.com/citadel_eu">Twitter account <strong>@citadel_eu</strong></a></li>
-		<li>Post on our <a href="https://www.facebook.com/citadelonthemove.eu">Facebook page</a></li>
-		<li><a href="https://github.com/CitadelOnTheMove/CitadelOnTheMove.github.io/issues/new">Add an issue here on Github</a> so we can add your links into our Tutorials / Stories / Applications section</li>
-	</ul>
-</li>
+	<li>Check out the <a href="http://www.citadelonthemove.eu/">Citadel on the Move website</a> for a complete and detailed presentation of the project</li>
+</ul>
+<h3>Github resssources</h3>
+<h4>The mobile application templates</h4>
+
+<p>these templates are meant to be forked and used to quickly deploy mobile applications. They are build on HTML5 and use the Citadel JSON file format. Most templates will work "out-ofthe-box" with none or very few changes. You are encouraged to build application upon them, and of course contribute back your improvements so they can benefit other people. The various templates demonstrate various uses of the mobile applications, and implement several functionnalities. Most templates use static JSON files, but can be set to use live data and/or a database</p>
+<ul>
+	<li><a href="https://github.com/CitadelOnTheMove/Citadel-Pois-Template" target=_new><i class="fa fa-icon-external-link"></i> POIs template</a> : use this template to display POI (Points Of Interest = places) on a map. Different categories can be used so the user can switch between the different categories that are displayed on the map.</li>
+	<li><a href="https://github.com/CitadelOnTheMove/Citadel-Parkings-Template" target=_new><i class="fa fa-icon-external-link"></i> Parkings template</a> : use this template to display live parking data, including their location, and the number of parkings left.</li>
+	<li><a href="https://github.com/CitadelOnTheMove/Citadel-Events-Template" target=_new><i class="fa fa-icon-external-link"></i> Events template</a> : use this template to display events. This template provides a calendar filter so events can be filtered by proximity and by date and time.</li>
+	<li><a href="https://github.com/CitadelOnTheMove/Citadel-Environmental-Template" target=_new><i class="fa fa-icon-external-link"></i> Environnemental template</a> : use this template if you wish to display live sensor data such as temperature, live air analysis, etc. [currently uses Xively for the sensor interface]</li>
+	<li><a href="https://github.com/CitadelOnTheMove/Citadel-Crowd-sourcing-Template" target=_new><i class="fa fa-icon-external-link"></i> Crowd-sourcing template</a> : use this template if you want thet app users to add new data to your dataset. [requires a database]</li>
+</ul>
+<h4>The Application Generator Tool (AGT)</h4>
+<p>this tools makes it easy to build an app without any technical skill. It is the source code of the tool that is available on Citadel platform.</p>
+<h4>The Data converter : converts CSV or Excel files to Citadel JSON files that are ready to be used into application templates</h4>
+<ul>
+	<li>Converter library (java)</li>
+	<li>Converter GUI (java)</li>
+	<li>Converter portlet (Liferay, java)</li>
 </ul>
 <br />
 <br />
 
 
-<h2><a name="ressources" class="anchor" href="#ressources"><span class="octicon octicon-link"></span></a><i class="fa fa-book"></i> Full ressources and documentation</h2>
+<h2><a name="community" class="anchor" href="#community"><span class="octicon octicon-link"></span></a><i class="fa fa-users"></i> Contribute !</h2>
+<p>Citadel is always looking for your feedbacks, use case, stories, and to hear about anything that you have made with our tools : please send us your links to your blog posts, mobile applications and other things you've made with Citadel.</p>
+<p>Please use the following channels to get in touch with us:</p>
 <ul>
-	<li>Check out the <a href="http://www.citadelonthemove.eu/">Citadel on the Move website</a> for a complete and detailed presentation of the project</li>
+	<li>Share a link or get in touch with our <a href="https://twitter.com/citadel_eu">Twitter account <strong>@citadel_eu</strong></a></li>
+	<li>Show your interest and post your Citadel-related news on our <a href="https://www.facebook.com/citadelonthemove.eu">Facebook page</a></li>
+	<li>Try out the Citadel tools and discuss with the community on the <a href="http://www.citadelonthemove.eu/">main Citadel on the Move website</a></li>
+	<li>Send us technical issues such as bug report and feature request an enhancements in the appropriate repository on <a href="https://github.com/CitadelOnTheMove/">our Github account</a>. You can use the pre-defined labels to help us categorize your feedback.</li>
+	<li>Or send us your news and stories to <a href="https://github.com/CitadelOnTheMove/CitadelOnTheMove.github.io/issues/new">these pages issue tracker</a> so we can add your links into our Tutorials / Examples / Stories / Applications section</li>
+</ul>
+<h3>Discuss in the Citadel Community<h3>
+<p>The Citadel Community is hosted on the <a href="http://www.citadelonthemove.eu/">Citadel on the Move website</a> as a public ressource and common good. You'll need to create a account to contribute.</p>
+<ul>
+	<li><a href="http://www.citadelonthemove.eu/en-us/exploremycitadel/talktothecommunity.aspx">Use the forum to discuss</a> about the AGT, the application and data templates, or anything related to the Citadel project itself</li>
+	<li><a href="http://www.citadelonthemove.eu/en-us/exploremycitadel/askaquestion.aspx">Ask a question</a> and vote for relevant answers</li>
+	<li><a href="http://www.citadelonthemove.eu/en-us/exploremycitadel/talktothecommunity.aspx">Ask for help</a> and help us improve the FAQ</li>
+</ul>
+<h3>Are you a developper ?<h3>
+<p>If you're a developper and have added useful stuff to the templates, AGT or other of our github repos, contributing back is highly appreciated by the team ! Please submit your changes by pushing a Pull Request to the relevant repo, and/or get in touch so we can check with you how your changes could be integratede and benefit the other developpers and Citadel users.</p>
+<p>Also you'll definitely want to see what we have in mind by checking the website and the roadmap, and maybe become a member of one of our teams :)</p>
+
+<h2>Roadmap</h2>
+<p>We are working on a roadmap to improve the Citadel toolbox, here are a few starting insights :</p>
+<ul>
+	<li>Replace GMaps by Leaflet</li>
+	<li>Facilitate integration of OSM data</li>
+	<li>Enable the on-the-fly use the converter</li>
+	<li>...</li>
 </ul>
 <br />
 <br />
