@@ -33,28 +33,50 @@
 
 
 <h2><a name="quickstart" class="anchor" href="#quickstart"><span class="octicon octicon-link"></span></a><i class="fa fa-rocket"></i> Quickstart</h2>
-<p>There are 2 main ways to use the Citadel tools. We recommend to start by using the tools on the plateform, which doesn't require any technical skills, and then switch to the github tools if you want more control on the resulting app.</p>
+<p>There are 2 main ways to use the Citadel tools. We recommend to start by using the tools on the Citadel plateform, which doesn't require any technical skill, and then switch to the Github tools if you want more control on the resulting apps.</p>
 
-<h3>EASIEST : Use the Citadel platform</h3>
-<ol>
-<li>Prepare a spreadsheet data file for the converter</li>
-<li>Convert it into Citadel JSON and publish it</li>
-<li>Use the Application Generator to make it an app !</li>
+<h3>Step 1 : Get and prepare your data</h3>
+<p>>Prepare a spreadsheet data file for the converter (see pre-requisites, see sample spreasheet)</p>
+
+<h3>Step 2 : Convert your data to Citadel JSON</h3>
+<p>Use the <a href="http://www.citadelonthemove.eu/en-us/opendata/convertmydataset.aspx" target="_blank">Citadel table to JSON Converter tool</a> to convert your CSV or XLS files into Citadel JSON that will be directly usable into your apps (see Converter tutorials, FAQ and How-tos)</p>
 </ol>
 
-<h3>EASY : Use the Citadel tools on Github</h3>
+<h3>Step 3 : Make your app !</h3>
+<h4>EASIEST : Use the <a href="http://www.citadelonthemove.eu/" target="_blank">Citadel platform</a></h4>
 <ol>
-<li>Prepare a spreadsheet data file for the converter</li>
-<li>Convert it into Citadel JSON and publish it</li>
-<li>Fork a template and tweak it to make your own app !</li>
+	<li><a href="http://www.citadelonthemove.eu/opendata/UploadMyDataset/tabid/243/category/EditProperty/language/en-US/Default.aspx" target="_blank">Publish your converted JSON files</a> to the Citadel datastore</a></li>
+	<li>Use the <a href="http://www.citadelonthemove.eu/en-us/createanapp/applicationgenerationtool.aspx" target="_blank">Application Generator</a> to make it an app ! (see AGT tutorial)</li>
+</ol>
+
+<h4>EASY : Use the Citadel mobile applications templates on Github</h4>
+<p> (see detailed Templates tutorials)</p>
+<ol>
+	<li>Choose and fork a template - or download it to your computer (see Templates differences and uses)<li>
+	<li>Add your converted data into the template<li>
+	<li>Play with the settings and tweak the template to fit your needs !</li>
 </ol>
 
 
 <h2><a name="github" class="anchor" href="#github"><span class="octicon octicon-link"></span></a><i class="fa fa-graduation-cap"></i> How to use the Github repositories</h2>
 <ul>
-<li>The Data converter (CSV or Excel files to Citadel JSON)</li>
-<li>The Application Generator Tool (AGT)</li>
-<li>The mobile application templates</li>
+<li>The Data converter : converts CSV or Excel files to Citadel JSON files that are ready to be used into application templates
+	<ul>
+		<li>Converter library</li>
+		<li>Converter GUI</li>
+		<li>Converter portlet (Liferay)</li>
+	</ul>
+</li>
+<li>The Application Generator Tool (AGT) : this tools makes it easy to build an app without any technical skill. It is the source code of the tool that is available on Citadel platform.</li>
+<li>The mobile application templates : these templates are meant to be forked and used to quickly deploy mobile applications. They are build on HTML5 and use the Citadel JSON file format. Most templates will work "out-ofthe-box" with none or very few changes. You are encouraged to build application upon them, and of course contribute back your improvements so they can benefit other people. The various templates demonstrate various uses of the mobile applications, and implement several functionnalities. Most templates use static JSON files, but can be set to use live data and/or a database :
+	<ul>
+		<li>POIs template : use this template to display POI (Points Of Interest = places) on a map. Different categories can be used so the user can switch between the different categories that are displayed on the map.</li>
+		<li>Parkings template : use this template to display live parking data, including their location, and the number of parkings left.</li>
+		<li>Events template : use this template to display events. This tempaltes provides a calendar filter so events can be filtered by proximity and by date and time.</li>
+		<li>Crowd-sourcing template : use this template if you want thet app users to add new data to your dataset. [requires a database]</li>
+		<li>Environnemental template : use this template if you wish to display live sensor data such as temperature, live air analysis, etc. [currently uses Xively for the sensor interface]</li>
+	</ul>
+</li>
 </ul>
 
 
