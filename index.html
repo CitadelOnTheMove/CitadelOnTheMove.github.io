@@ -22,9 +22,13 @@
         <p class="header">Citadel helps you use <strong>Open Data</strong> to create <strong>Mobile Apps</strong> that make your city a smarter place to live</p>
         <ul>
           <li><a class="buttons github" href="https://github.com/CitadelOnTheMove">GitHub Profile</a></li>
-          <li><a class="buttons " href="http://www.citadelonthemove.eu/">Citadel on the Move website</a></li>
+          <li><a class="buttons " href="http://www.citadelonthemove.eu/">Community website</a></li>
         </ul>
       </header>
+      
+      <nav>
+        
+      </nav>
       
       <section>
 
@@ -48,39 +52,41 @@
 <h4>EASY : Use the Citadel mobile applications templates on Github</h4>
 <p> (see detailed Templates tutorials)</p>
 <ol>
-	<li>Choose and fork a template - or download it to your computer (see Templates differences and uses below)<li>
-	<li>Add your converted data into the template<li>
+	<li>Choose and fork a template - or download it to your computer (see Templates differences and uses below)</li>
+	<li>Add your converted data into the template</li>
 	<li>Play with the settings and tweak the template to fit your needs !</li>
 </ol>
 
 
 <h2><a name="github" class="anchor" href="#github"><span class="octicon octicon-link"></span></a><i class="fa fa-graduation-cap"></i> How to use the Github repositories</h2>
+<h3>The mobile application templates</h3>
+<p>these templates are meant to be forked and used to quickly deploy mobile applications. They are build on HTML5 and use the Citadel JSON file format. Most templates will work "out-ofthe-box" with none or very few changes. You are encouraged to build application upon them, and of course contribute back your improvements so they can benefit other people. The various templates demonstrate various uses of the mobile applications, and implement several functionnalities. Most templates use static JSON files, but can be set to use live data and/or a database</p>
 <ul>
-<li>The Data converter : converts CSV or Excel files to Citadel JSON files that are ready to be used into application templates
-	<ul>
-		<li>Converter library</li>
-		<li>Converter GUI</li>
-		<li>Converter portlet (Liferay)</li>
-	</ul>
-</li>
-<li>The Application Generator Tool (AGT) : this tools makes it easy to build an app without any technical skill. It is the source code of the tool that is available on Citadel platform.</li>
-<li>The mobile application templates : these templates are meant to be forked and used to quickly deploy mobile applications. They are build on HTML5 and use the Citadel JSON file format. Most templates will work "out-ofthe-box" with none or very few changes. You are encouraged to build application upon them, and of course contribute back your improvements so they can benefit other people. The various templates demonstrate various uses of the mobile applications, and implement several functionnalities. Most templates use static JSON files, but can be set to use live data and/or a database :
-	<ul>
-		<li><a href="https://github.com/CitadelOnTheMove/Citadel-Pois-Template" target=_new><i class="fa fa-icon-external-link"></i> POIs template</a> : use this template to display POI (Points Of Interest = places) on a map. Different categories can be used so the user can switch between the different categories that are displayed on the map.</li>
-		<li><a href="https://github.com/CitadelOnTheMove/Citadel-Parkings-Template" target=_new><i class="fa fa-icon-external-link"></i> Parkings template</a> : use this template to display live parking data, including their location, and the number of parkings left.</li>
-		<li><a href="https://github.com/CitadelOnTheMove/Citadel-Events-Template" target=_new><i class="fa fa-icon-external-link"></i> Events template</a> : use this template to display events. This template provides a calendar filter so events can be filtered by proximity and by date and time.</li>
-		<li><a href="https://github.com/CitadelOnTheMove/Citadel-Environmental-Template" target=_new><i class="fa fa-icon-external-link"></i> Environnemental template</a> : use this template if you wish to display live sensor data such as temperature, live air analysis, etc. [currently uses Xively for the sensor interface]</li>
-		<li><a href="https://github.com/CitadelOnTheMove/Citadel-Crowd-sourcing-Template" target=_new><i class="fa fa-icon-external-link"></i> Crowd-sourcing template</a> : use this template if you want thet app users to add new data to your dataset. [requires a database]</li>
-	</ul>
-</li>
+	<li><a href="https://github.com/CitadelOnTheMove/Citadel-Pois-Template" target=_new><i class="fa fa-icon-external-link"></i> POIs template</a> : use this template to display POI (Points Of Interest = places) on a map. Different categories can be used so the user can switch between the different categories that are displayed on the map.</li>
+	<li><a href="https://github.com/CitadelOnTheMove/Citadel-Parkings-Template" target=_new><i class="fa fa-icon-external-link"></i> Parkings template</a> : use this template to display live parking data, including their location, and the number of parkings left.</li>
+	<li><a href="https://github.com/CitadelOnTheMove/Citadel-Events-Template" target=_new><i class="fa fa-icon-external-link"></i> Events template</a> : use this template to display events. This template provides a calendar filter so events can be filtered by proximity and by date and time.</li>
+	<li><a href="https://github.com/CitadelOnTheMove/Citadel-Environmental-Template" target=_new><i class="fa fa-icon-external-link"></i> Environnemental template</a> : use this template if you wish to display live sensor data such as temperature, live air analysis, etc. [currently uses Xively for the sensor interface]</li>
+	<li><a href="https://github.com/CitadelOnTheMove/Citadel-Crowd-sourcing-Template" target=_new><i class="fa fa-icon-external-link"></i> Crowd-sourcing template</a> : use this template if you want thet app users to add new data to your dataset. [requires a database]</li>
+</ul>
+<h3>The Application Generator Tool (AGT)</h3>
+<p>this tools makes it easy to build an app without any technical skill. It is the source code of the tool that is available on Citadel platform.</p>
+<h3>The Data converter : converts CSV or Excel files to Citadel JSON files that are ready to be used into application templates</h3>
+<ul>
+	<li>Converter library (java)</li>
+	<li>Converter GUI (java)</li>
+	<li>Converter portlet (Liferay, java)</li>
 </ul>
 <br />
 <br />
 
-<h2><a name="github" class="anchor" href="#github"><span class="octicon octicon-link"></span></a><i class="fa fa-table"></i> Spreadsheet template files</h2>
+<h2><a name="samples" class="anchor" href="#samples"><span class="octicon octicon-link"></span></a><i class="fa fa-table"></i> Spreadsheet samples / template files</h2>
+<p>These templates files can be used to structure your data. It indicates the mandatory and optionnal fields that you need to put into the file so it can produce a valid and usable JSON file through the Converter.</p>
+<p>Note : if you're experiencing troubles with accents, please check your file is encoded in UTF8.</p>
 <ul>
-<li>Parking sample data template</li>
-<li>Remarkable trees sample data template</li>
+<li>POIs template : CSV, XLS, Citadel-JSON</li>
+<li>Remarkable trees template : CSV, XLS, Citadel-JSON</li>
+<li>Parking template : CSV, XLS, Citadel-JSON</li>
+<li>Events template : CSV, XLS, Citadel-JSON</li>
 <li>...</li>
 </ul>
 <br />
@@ -108,7 +114,7 @@
 </ul>
 <h3>Stories</h3>
 <ul>
-	<li>How mobile apps where build in Ghent...</li>
+	<li>How mobile apps where build in Athens, Ghent, Issy, Manchester,...</li>
 	<li>...</li>
 </ul>
 <br />
