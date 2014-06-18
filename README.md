@@ -1,7 +1,7 @@
 Citadel On the Move
 ===================
 
-This repo is used as the home page for the Citadel github repositories. It references the documentation, tutorials, roadmap, and points to the appropriate ressources to quickly get started.
+This repository hosts the home page for the Citadel Github account. It references the documentation, tutorials, roadmap, and points to the appropriate ressources to quickly get started.
 
 
 # [Read the Citadel pages](http://citadelonthemove.github.io/)
