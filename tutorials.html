@@ -63,11 +63,15 @@
 	<li>Ensure that you have some basic fields which will be helpful when you will want to display your data : a title and description for each element is fine to start (you could also include addresses, time information, or any other data). An nice field to add would be a "Category" field", as it will allow you to filter various data in the resulting app, and let user choose to display only markers for one specific category.</li>
 	<li>Ensure that you have <strong>geographical coordinates</strong> in your file, that is "latitude" " and "longitude" or "LatLong" or "Geo-something", which contains numbers like "48.12345", or "48.12345,2.32105". That may sound like a tricky part, but if you have only addresses there are many tools around the web that will let you easily and freely convert adresses to geographical coordinates : that process is called <em>geocoding</em>. Here we will assume that your data does have this information, as there are many tutorials around the web to help you add it to your data have it if it doesn't have it already.</li>
 	<li>Ensure that you have an "ID" for each line : an ID is basically a number which can be no more that a line number. All is required is having a different ID for each line, because only data with a unique ID will be displayed. So if there is no ID yet, just add a new column, name it "ID" or "unique number" (at your convenience), and put a line number in each field. If you're using Excel or LibreOffice, put "1" in first field, then write "=1+" in next field below, and select the "1" field. Then copy-paste that field to the whole column so that it automatically fills all IDs.</li>
-	<li>Troubleshooting tip : if you experience problems with accents (é, ù, ß, etc.), your file may be encoded in something else than UTF-8. What you need is to save it using UTF-8 encoding (also known as Unicode) which is the world standard, and that will make it compatible anywhere. The process may differ depending of used software, but it's usually available as an option while saving the file.</li>
 </ul>
 
-<p>TO BE INTEGRATED : Tips on preparing a successful dataset</p>
-<p>Completeness of the file</p>
+<h3>Troubleshooting tips</h3>
+<h4>Character encoding</h4>
+<ul>
+	<li>If you experience problems with accents (é, ù, ß, etc.), your file may be encoded in something else than UTF-8. What you need is to save it using UTF-8 encoding (also known as Unicode) which is the world standard, and that will make it compatible anywhere. The process may differ depending of used software, but it's usually available as an option while saving the file.</li>
+	<li>The dataset must be encoded in UTF8 (UCS Transformation Format – 8bit) to properly handle all characters. When using CSV, make sure to export using UTF8 or use an external tool before attempting to convert the file. When using Excel, use the xlsx format if possible since it is more up to date; otherwise save as CSV and ensure UTF8 coding from there.</li>
+</ul>
+<h4>Completeness of the file</h4>
 <p>All of the fields required by the JSON schema must be filled in every row:</p>
 <ul>
 	<li>POI title,</li>
@@ -75,15 +79,15 @@
 	<li>POI geographical coordinates, </li>
 	<li>POI address.</li>
 </ul>
-<p>Latitude and Longitude</p>
+<h4>Latitude and Longitude</h4>
 <p>The coordinates in the original file must be in one of two ways:</p>
-<p>1. Latitude and longitude can be in two separate columns. In this case, the Citadel JSON format can be “created” by first dragging “Latitude”, then dragging “Custom text” and typing in a space, finally dragging “Longitude”.</p>
-<p>2. Otherwise the original file can already contain the correct formatting, namely latitude and longitude separated by a space. In this case you simply drag “Geographical Coordinates”.</p>
+<ol>
+	<li>Latitude and longitude can be in two separate columns. In this case, the Citadel JSON format can be “created” by first dragging “Latitude”, then dragging “Custom text” and typing in a space, finally dragging “Longitude”.</li>
+	<li>Otherwise the original file can already contain the correct formatting, namely latitude and longitude separated by a space. In this case you simply drag “Geographical Coordinates”.</li>
 <p>Any other formatting (ie separated by a comma, a semicolon or whatever) will not work since it is not recognized by the Citadel JSON schema.</p>
-<p>Coordinate values</p>
+<h4>Coordinate values</h4>
 <p>The coordinates can be without a sign or with a minus sign, and can range from -90 (or -90.0 or -90.00) until 90 (or 90.0 or 90.00) and, in a similar fashion, from -180 to 180, with any number of decimals. Note that coherence with these values is checked during validation (not during conversion) and if there is an error it is not possible to download (or upload) the file.</p>
-<p>Character coding</p>
-<p>The dataset must be encoded in UTF8 (UCS Transformation Format – 8bit) to properly handle all characters. When using CSV, make sure to export using UTF8 or use an external tool before attempting to convert the file. When using Excel, use the xlsx format if possible since it is more up to date; otherwise save as CSV and ensure UTF8 coding from there.</p>
+</ul>
 <br />
 <br />
 
