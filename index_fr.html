@@ -1,0 +1,275 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Citadel on the Move</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $("#toc").prepend("<strong>SUMMARY</strong>");
+      $("h2, h3, h4").each(function(i) {
+        var current = $(this);
+        current.attr("id", "title" + i);
+        $("#toc .body").append("<li title=\"" + this.nodeName.toLowerCase() + "\"><a id=\"link" + i + "\" href=\"#title" + i + "\">" + current.text() + "</a></li>");
+      });
+    });
+    </script>
+  </head>
+  
+  <body>
+    <nav>
+      <ul>
+        <li><a href="#quickstart">Démarrage rapide</a></li>
+        <li><a href="#examples">Exemples</a></li>
+        <li><a href="#ressources">Ressources</a></li>
+        <li><a href="#tutorials">Tutoriels</a></li>
+        <li><a href="#community">Communité</a></li>
+        <li><a href="#roadmap">Roadmap</a></li>
+        <li><a href="#credits">Crédits</a></li>
+        <li class="lang"><a href="index.html">EN</a></li>
+      </ul>
+    </nav>
+      
+    <div class="wrapper">
+      
+      <header>
+        <h1 class="header"><img src="images/Citadel-logo.png" alt= "Citadel on the Move" /></h1>
+        <p class="header">vous aide à tirer partie des <strong>Données Ouvertes</strong> pour créer des <strong>Applications Mobiles</strong> qui rendent votre ville plus "intelligente"</p>
+        <ul>
+          <li><a class="buttons" href="http://www.citadelonthemove.eu/"><i class="fa fa-link"></i> Site web</a></li>
+          <li><a class="buttons" href="https://github.com/CitadelOnTheMove"><i class="fa fa-github"></i> Profil GitHub</a></li>
+          <li><a class="buttons" href="https://github.com/CitadelOnTheMove/CitadelOnTheMove.github.io/issues"><i class="fa fa-github"></i> Votre avis !</a></li>
+        </ul>
+      </header>
+
+      <section>
+      
+      <div id="toc"><ul class="body"></ul></div>
+      
+<a name="top" class="anchor" href="#top"></a>
+<p><blockquote>Citadel fournit des outils qui permettent à tous de publier et d'utiliser des données ouvertes pour créer facilement des applications mobiles</blockquote></p>
+<p>
+	<i class="fa fa-check"></i> Pas (ou peu) de compétences techniques requises<br />
+	<i class="fa fa-check"></i> Des applications mobiles HTML5 prêtes à l'emploi<br />
+	<i class="fa fa-check"></i> Publication simplifiée de données "tableur" (CSV, Excel, tableaux de données)<br />
+	<i class="fa fa-check"></i> Un format ouvert et interoperable : développez votre application une fois, réutilisez-la partout<br />
+</p>
+
+<h2 id="quickstart"><a name="quickstart" class="anchor" href="#quickstart"><span class="octicon octicon-link"></span></a><i class="fa fa-rocket"></i> Démarrage rapide</h2>
+<p>Il existe 2 principales manières d'utiliser les outils de Citadel. Nous vous recommandons de commencer par utiliser les outils disponibles sur la plateforme web de Citadel, qui ne demande pas de compétence technique particulière, puis d'aller plus loin en utilisant les outils disponibles sur le compte Github du projet si vous souhiatez avoir plus de contrôle sur les applications et les données, ou héberger votre propre plateforme.</p>
+
+<h3>Etape 1 : Récupérez et préparez vos données</h3>
+<p>Préparez un fichier CSV (ou Excel) pour le convertisseur. Veuillez utiliser nos <a href="#samples">fichiers de démonstration</a>, ou <a href="#tutorials">suivez le tutoriel pour prepare un fichier</a>.</p>
+
+<h3>Etape 2 : Convertissez vos données au format Citadel JSON</h3>
+<p>Utilisez le <a href="http://www.citadelonthemove.eu/en-us/opendata/convertmydataset.aspx" target="_blank"><i class="fa fa-icon-external-link"></i> Convertisseur Citadel JSON</a> pour convertir votre fichier CSV ou XLS au format Citadel JSON. Ce format est directement utilisable par les applications mobiles. Veuillez suivre le <a href="#tutorials">tutoriel sur le convertisseur</a> et consulter la FAQ, la documentation ou les forums si vous rencontrez une difficulté.</p>
+</ol>
+
+<h3>Etape 3 : Créez votre application !</h3>
+<h4>LE PLUS SIMPLE : Utilisez la <a href="http://www.citadelonthemove.eu/" target="_blank"><i class="fa fa-icon-external-link"></i> plateforme Citadel</a></h4>
+<ol>
+	<li><a href="http://www.citadelonthemove.eu/Login">Connectez-vous sur la plateforme</a> (vous devez créer votre compte si vous n'en avez pas encore)</li>
+	<li><a href="http://www.citadelonthemove.eu/opendata/UploadMyDataset/tabid/243/category/EditProperty/language/en-US/Default.aspx" target="_blank"><i class="fa fa-icon-external-link"></i> Publiez votre fichier au format Citadel JSON</a> dans le répertoire de données de Citadel</a></li>
+	<li>Utilisez le <a href="http://www.citadelonthemove.eu/en-us/createanapp/applicationgenerationtool.aspx" target="_blank"><i class="fa fa-icon-external-link"></i> Générateur d'Applications</a> pour créer votre application ! (voir les tutoriels pour plus de détails)</li>
+</ol>
+
+<h4>SIMPLE : Utilisez les modèles d'applications mobiles de Citadel publiés sur Github</h4>
+<p> (voir les explications sur ces modèles dans la partie <a href="#ressources">Ressources, Modèles et Documentation</a>)</p>
+<ol>
+	<li>Choissisez un modèle et "forkez"-le - ou téléchargez-le sur votre ordinateur</li>
+	<li>Ajoutez vos données au format Citadel JSON dans le modèle (répertoire data/)</li>
+	<li>Modifiez les paramètres dans le fichier settings.php, et adaptez l'application pour l'ajuster à vos besoins !</li>
+</ol>
+
+
+<h2 id="examples"><a name="examples" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a><i class="fa fa-check-square-o"></i> Exemples, cas d'usages et histoires d'utilisations</h2>
+<h3>Exemples : applications créées avec Citadel</h3>
+<ul>
+	<li><a href="http://www.items.fr/apps/citadel/treefinder-issy/" target="_blank"><i class="fa fa-icon-external-link"></i> "Treefinder" : les arbres remarquables d'Issy-les-Moulineaux</a></li>
+	<li><a href="http://citadel.binarysunset.net/treefinder/gent/" target="_blank"><i class="fa fa-icon-external-link"></i> "Treefinder" : les arbres remarquables de la ville de Ghent en Belgique</a></li>
+	<li><a href="http://www.toegent.be/matinee/" target="_blank"><i class="fa fa-icon-external-link"></i> Galleries d'art à Ghent</a></li>
+	<li><a href="http://www.toegent.be/gentmobiliteit/" target="_blank"><i class="fa fa-icon-external-link"></i> Disponibilité des parkings en temps réel à Ghent (toujours en Belgique :) )</a></li>
+	<li><a href="http://www.toegent.be/gentverwent/" target="_blank"><i class="fa fa-icon-external-link"></i> "Gent Verwent" : entreprises à Ghent</a></li>
+	<li>...</li>
+</ul>
+<p>Si vous souhaitez faire connaître une application construite avec Citadel sur cette page, <a href="mailto:info@citadelonthemove.eu">contactez-nous</a> !</p>
+<h3>Cas d'usages</h3>
+<ul>
+	<li>...</li>
+</ul>
+<h3>Histoires d'utilisations</h3>
+<ul>
+	<li>Vos articles qui racontent comment vous avez créé des applications avec les outils de Citadel...</li>
+	<li>...</li>
+</ul>
+<br />
+<br />
+
+
+<h2 id="ressources"><a name="ressources" class="anchor" href="#ressources"><span class="octicon octicon-link"></span></a><i class="fa fa-book"></i> Ressources, modèles and documentation</h2>
+<h3>Histoire du projet et plus d'informations dessus</h3>
+<ul>
+	<li>Consultez le <a href="http://www.citadelonthemove.eu/">site web de Citadel on the Move</a> pour une présentaiton plus détaillée et plus complète du projet</li>
+</ul>
+<h3>Ressources sur Github</h3>
+<h4>Les modèles d'applications mobile</h4>
+<p>Ces modèles sont des applications HTML5 parfaitement fonctionnelles. Elles ont été conçues pour répondre à une grande variété de cas d'usages, et sont là pour faciliter la création de nouvelles applications mobiles. N'hésitez pas à les utiliser, les modifier, jouer avec... elles sont là pour ça ! Sauf exception pour les capteurs environnementaux, tous les modèles utilisent le format Citadel JSON, qui offre un format de données ouvert et standard, ainsi utilisable par toutes les applications. La majorité des modèles fonctionnent sans adaptation ni paramétrage, ou avec des réglages minimes. Citadel vous invite à construire vos applications à partir de cette base, et à reverser aux projets vos améliorations, si vous le souhaitez, afin que les modèles s'enrichissent au fur et à mesure. N'hésitez pas également à faire part de vos suggestions, remarques et souhaits ! Les divers modèles proposent des types d'usages diversifiés, et implémentent de nombreuses fonctionnalités telles que des catégories de points, un calendrier, des instructions de navigation pour se rendre à un endroit donné, etc. La majorité des modèles utilisent par défaut des fichiers Citadel JSON statiques, mais peuvent être configurés ou adaptés pour utiliser des données dynamiques, ou une base de données.</p>
+<ul>
+	<li><a href="https://github.com/CitadelOnTheMove/Citadel-Pois-Template" target=_new><i class="fa fa-icon-external-link"></i> Points d'Intérêts (POI)</a> : use this template to display POI (Points Of Interest = places) on a map. Different categories can be used so the user can switch between the different categories that are displayed on the map.</li>
+	<li><a href="https://github.com/CitadelOnTheMove/Citadel-Parkings-Template" target=_new><i class="fa fa-icon-external-link"></i> Parkings</a> : use this template to display live parking data, including their location, and the number of parkings left.</li>
+	<li><a href="https://github.com/CitadelOnTheMove/Citadel-Events-Template" target=_new><i class="fa fa-icon-external-link"></i> Evénements</a> : use this template to display events. This template provides a calendar filter so events can be filtered by proximity and by date and time.</li>
+	<li><a href="https://github.com/CitadelOnTheMove/Citadel-Environmental-Template" target=_new><i class="fa fa-icon-external-link"></i> Capteurs environnementaux</a> : use this template if you wish to display live sensor data such as temperature, live air analysis, etc. [utilise Xively comme source de données par défaut]</li>
+	<li><a href="https://github.com/CitadelOnTheMove/Citadel-Crowd-sourcing-Template" target=_new><i class="fa fa-icon-external-link"></i> "Crowd-sourcing""e</a> : ce modèle permet aux utilisateurs de l'application de créer leurs propres points d'intérêt sur la carte. [nécessite une base de données]</li>
+</ul>
+<h4>Le Générateur d'Applications mobiles (Application Generator Tool, ou AGT)</a></h4>
+<p>Cet outil permet de créer une application sans compétence technique. Il s'agit du code source de la plateforme telle qu'elle est disponible sur la plateforme Citadel.</p>
+<ul>
+	<li><a href="https://github.com/CitadelOnTheMove/agt" target=_new><i class="fa fa-icon-external-link"></i> AGT source code</a></li>
+	<li><a href="http://www.citadelonthemove.eu/en-us/createanapp/applicationgenerationtool.aspx" target=_new><i class="fa fa-icon-external-link"></i> Application Generation Tool on Citadel website</a></li>
+</ul>
+<h4>Le Convertisseur : converts CSV or Excel datasets to Citadel JSON files that are ready to be used into application templates</h4>
+<ul>
+	<li>Converter GUI (java) : this standalone application can be downloaded and used directly on your computer to convert files to Citadel-JSON
+		<ul>
+			<li><a href="https://github.com/CitadelOnTheMove/converter-gui/wiki" target="_blank">Read the wiki documentation</a></li>
+			<li><a href="http://rbox.tv/citadel/converter/java/" target="_blank">Download the binaries</a> (get latest converter-X.X.jar version)</li>
+		</ul>
+	</li>
+	<li>Converter library (java) : this library is designed to be used within an application
+		<ul>
+			<li><a href="https://github.com/CitadelOnTheMove/converter-lib/wiki" target="_blank">Read the wiki documentation</a></li>
+			<li><a href="http://rbox.tv/citadel/converter/java/lib/" target="_blank">Download the binaries</a></li>
+		</ul>
+	</li>
+	<li>Converter portlet (Liferay, java) : this version is designed to include the converter in a Liferay portal
+		<ul>
+			<li><a href="https://github.com/CitadelOnTheMove/converter-portlet/wiki" target="_blank">Read the wiki documentation</a></li>
+			<li><a href="http://citadel.rbox.tv/" target="_blank">Use the Converter</a></li>
+		</ul>
+	</li>
+	<li>Converter PHP library (beta version) : this library can be used to convert dynamically convert files from CSV to Citadel-JSON through a basic API. Feedbacks and improvements welcomed !
+		<ul>
+			<li><a href="https://github.com/CitadelOnTheMove/converter-php-lib" target="_blank">Get to the repository and read the detailed documentation</a></li>
+			<li>This can basically be used to provide live data to your applicaitons, that are converted on the fly from CSV files</li>
+		</ul>
+	</li>
+</ul>
+<h3>Samples files and models</h3>
+<p>These sample files are used in various cases: some can be used to structure your data, while other require different levels of processing, or can be used directly in the templates. The templates sample files indicates the mandatory and optionnal fields that you need to put into a CSV or XLS file so it can produce a valid and usable JSON file through the Converter.</p>
+<p>Note : if you're experiencing troubles with accents, please check your file is encoded in UTF8.</p>
+<p><a href="https://github.com/CitadelOnTheMove/CitadelOnTheMove.github.io/tree/master/examples" target="_blank"><i class="fa fa-icon-external-link"></i> Open samples folder on Github</a></p>
+<ul>
+	<li>Sample templates files: use as models to structure your data</li>
+	<ul>
+		<li>POIs template : CSV, XLS</li>
+		<li>Remarkable trees template : CSV, XLS</li>
+		<li>Parking template : CSV, XLS</li>
+		<li>Events template : CSV, XLS</li>
+	</ul>
+	<li>Training input files: demonstrate various uses of the converter. See tutorials for a more detailed description</li>
+	<ul>
+		<li>Sortir le soir à Issy</li>
+	<li>Galleries in Athens</li>
+	<li>Manchester libraries</li>
+	<li>Sportcentres in Ghent</li>
+	</ul>
+	<li>Citadel-Json files: ready-to-use files</li>
+	<ul>
+		<li>Working Citadel-JSON files are provided with every application template. Check for ".json" files in the "data/" folder in their respective Github repository.</li>
+	</ul>
+</ul>
+<br />
+<br />
+
+
+<h2 id="tutorials"><a name="tutorials" class="anchor" href="#tutorials"><span class="octicon octicon-link"></span></a><i class="fa fa-graduation-cap"></i> Tutoriels and Modes d'emplois</h2>
+<h3>Tutoriels</h3>
+<ul class="nobullet">
+	<li><i class="fa fa-file-text-o"></i> Tutorial : <a href="tutorials.html#tutorial1">Prepare your data sheet</a></li>
+	<li><i class="fa fa-file-text-o"></i> Tutorial 2 : Use the convertor
+		<ul>
+			<li><a href="http://rbox.tv/citadel/converter/java/bd_restaurants_bars.mpg" target="_blank"><i class="fa fa-eye"></i> Screencast (Quicktime required)</a></li>
+			<li><a href="tutorials.html#tutorial2"><i class="fa fa-file-text-o"></i> A few tips about the Convertor</a></li>
+		</ul>
+	</li>
+	<li><i class="fa fa-file-text-o"></i> Tutorial 3 : <a href="tutorials.html#tutorial3">Use the Application Generation Tool</a></li>
+	<li><i class="fa fa-file-text-o"></i> Tutorial 4 : <a href="tutorials.html#tutorial4">Fork and customize an application template</a></li>
+	<li>...</li>
+</ul>
+
+<h3>Manuels</h3>
+<ul class="nobullet">
+	<li><i class="fa fa-book"></i> <a href="https://github.com/CitadelOnTheMove/agt/wiki/Brief-User-Guide">Application Generator User Guide</a></li>
+  <li><i class="fa fa-book"></i> <a href="https://github.com/CitadelOnTheMove/agt/wiki/Detailed-User-Guide">Application Generator Detailed User Guide</a></li>
+  <li><i class="fa fa-book"></i> <a href="https://github.com/CitadelOnTheMove/agt/wiki/Programming-Guide---AGT">Application Generator Programming Guide</a></li>
+  <li><i class="fa fa-book"></i> <a href="https://github.com/CitadelOnTheMove/converter-lib/wiki">Convertor Wiki</a></li>
+</ul>
+<br />
+<br />
+
+
+<h2 id="community"><a name="community" class="anchor" href="#community"><span class="octicon octicon-link"></span></a><i class="fa fa-users"></i> Contribuez !</h2>
+<p>Citadel is always looking for your feedbacks, use case, stories, and to hear about anything that you have made with our tools : please send us your links to your blog posts, mobile applications and other things you've made with Citadel.</p>
+<p>Please use the following channels to get in touch with us:</p>
+<ul>
+	<li>Share a link or get in touch with our <a href="https://twitter.com/citadel_eu">Twitter account <strong>@citadel_eu</strong></a></li>
+	<li>Show your interest and post your Citadel-related news on our <a href="https://www.facebook.com/citadelonthemove.eu">Facebook page</a></li>
+	<li>Try out the Citadel tools and discuss with the community on the <a href="http://www.citadelonthemove.eu/">main Citadel on the Move website</a></li>
+	<li>Send us technical issues such as bug report and feature request an enhancements in the appropriate repository on <a href="https://github.com/CitadelOnTheMove/">our Github account</a>. You can use the pre-defined labels to help us categorize your feedback.</li>
+	<li>Or send us your news and stories to <a href="https://github.com/CitadelOnTheMove/CitadelOnTheMove.github.io/issues/new">these pages issue tracker</a> so we can add your links into our Tutorials / Examples / Stories / Applications section</li>
+</ul>
+<h3>Discutez avec les autres membres de la communauté Citadel</h3>
+<p>The Citadel Community is hosted on the <a href="http://www.citadelonthemove.eu/">Citadel on the Move website</a> as a public ressource and common good. You'll need to create a account to contribute.</p>
+<ul>
+	<li><a href="http://www.citadelonthemove.eu/en-us/exploremycitadel/talktothecommunity.aspx">Use the forum to discuss</a> about the AGT, the application and data templates, or anything related to the Citadel project itself</li>
+	<li><a href="http://www.citadelonthemove.eu/en-us/exploremycitadel/askaquestion.aspx">Ask a question</a> and vote for relevant answers</li>
+	<li><a href="http://www.citadelonthemove.eu/en-us/exploremycitadel/talktothecommunity.aspx">Ask for help</a> and help us improve the FAQ</li>
+</ul>
+<h3>Vous développez ?</h3>
+<p>If you're a developper and have added useful stuff to the templates, AGT or other of our github repos, contributing back is highly appreciated by the team ! Please submit your changes by pushing a Pull Request to the relevant repo, and/or get in touch so we can check with you how your changes could be integratede and benefit the other developpers and Citadel users.</p>
+<p>Also you'll definitely want to see what we have in mind by checking the website and the roadmap, and maybe become a member of one of our teams :)</p>
+<br />
+<br />
+
+
+<h2 id="roadmap"><a name="roadmap" class="anchor" href="#roadmap"><span class="octicon octicon-link"></span></a><i class="fa fa-road"></i> Roadmap</h2>
+<p>Les idées ne manquent pas pour compléter la boîte à outils de Citadel, voici les principaux chantiers engagés ou à venir :</p>
+<ul>
+	<li>Ajouter de nouveaux tutoriels, exemples, des modes d'emplois pratiques...</li>
+	<li>Remplacer GMaps par Leaflet (et OSM)</li>
+	<li>Faciliter l'intégration de données issues d'OSM</li>
+	<li>Développer une bibliothèque pour faciliter la création de fichiers Citadel-JSON depuis diverses source</li>
+	<li>Permettre une utilisation "à la volée" du convertisseur</li>
+	<li>Permettre de convertir des fichiers geoJSON</li>
+	<li>...</li>
+</ul>
+<br />
+<br />
+
+
+<h2 id="credits"><a name="credits" class="anchor" href="#credits"><span class="octicon octicon-link"></span></a><i class="fa fa-thumbs-o-up"></i> Credits and thanks</h2>
+<p>Citadel code was funded and opensourced by an european project : see <a href="http://www.citadelonthemove.eu/">Citadel on the Move website</a> for full details</p>
+<p>Thanks to <a href="http://fortawesome.github.io/">Font Awesome</a> for the great iconic font used in these pages.</p>
+<br />
+<br />
+
+
+      </section>
+
+      <footer>
+        <p><small>Hosted on <a href="http://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>

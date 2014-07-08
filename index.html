@@ -6,12 +6,23 @@
     <title>Citadel on the Move</title>
     <link rel="stylesheet" href="stylesheets/styles.css">
     <link rel="stylesheet" href="stylesheets/pygment_trac.css">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js" type="text/javascript"></script>
     <script src="javascripts/scale.fix.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <script type="text/javascript">
+    $(document).ready(function() {
+      $("#toc").prepend("<strong>SUMMARY</strong>");
+      $("h2, h3, h4").each(function(i) {
+        var current = $(this);
+        current.attr("id", "title" + i);
+        $("#toc .body").append("<li title=\"" + this.nodeName.toLowerCase() + "\"><a id=\"link" + i + "\" href=\"#title" + i + "\">" + current.text() + "</a></li>");
+      });
+    });
+    </script>
   </head>
   
   <body>
@@ -24,6 +35,7 @@
         <li><a href="#community">Community</a></li>
         <li><a href="#roadmap">Roadmap</a></li>
         <li><a href="#credits">Credits</a></li>
+        <li class="lang"><a href="index_fr.html">FR</a></li>
       </ul>
     </nav>
       
@@ -38,9 +50,11 @@
           <li><a class="buttons" href="https://github.com/CitadelOnTheMove/CitadelOnTheMove.github.io/issues"><i class="fa fa-github"></i> Give Feedback!</a></li>
         </ul>
       </header>
-      
-      <section>
 
+      <section>
+      
+      <div id="toc"><ul class="body"></ul></div>
+      
 <a name="top" class="anchor" href="#top"></a>
 <p><blockquote>Citadel aims to provide tools for anyone to publish and use open data to easily create mobile apps</blockquote></p>
 <p>
@@ -50,21 +64,22 @@
 	<i class="fa fa-check"></i> Interoperable and open data format : develop once, reuse everywhere<br />
 </p>
 
-<h2><a name="quickstart" class="anchor" href="#quickstart"><span class="octicon octicon-link"></span></a><i class="fa fa-rocket"></i> Quickstart</h2>
-<p>There are 2 main ways to use the Citadel tools. We recommend to start by using the tools on the Citadel plateform, which doesn't require any technical skill, and then switch to the Github tools if you want more control on the resulting apps.</p>
+<h2 id="quickstart"><a name="quickstart" class="anchor" href="#quickstart"><span class="octicon octicon-link"></span></a><i class="fa fa-rocket"></i> Quickstart</h2>
+<p>There are 2 main ways to use the Citadel tools. We recommend to start by using the tools on the Citadel plateform, which doesn't require any technical skill, and then switch to the Github tools if you want more control on the resulting apps, or want to host your own platform.</p>
 
 <h3>Step 1 : Get and prepare your data</h3>
-<p>Prepare a spreadsheet data file for the converter (see pre-requisites, see sample spreasheet)</p>
+<p>Prepare a spreadsheet data file for the converter. Check out our <a href="#samples">sample files</a>, or <a href="#tutorials">follow the tutorial to prepare a file</a>.</p>
 
 <h3>Step 2 : Convert your data to Citadel JSON</h3>
-<p>Use the <a href="http://www.citadelonthemove.eu/en-us/opendata/convertmydataset.aspx" target="_blank"><i class="fa fa-icon-external-link"></i> Citadel table to JSON Converter tool</a> to convert your CSV or XLS files into Citadel JSON that will be directly usable into your apps (see Converter tutorials, FAQ and How-tos)</p>
+<p>Use the <a href="http://www.citadelonthemove.eu/en-us/opendata/convertmydataset.aspx" target="_blank"><i class="fa fa-icon-external-link"></i> Citadel table to JSON Converter tool</a> to convert your CSV or XLS files into Citadel JSON that will be directly usable into your apps. Please check out the <a href="#tutorials">Converter tutorials</a>, and FAQ and How-tos if you encounter any difficulty.</p>
 </ol>
 
 <h3>Step 3 : Make your app !</h3>
 <h4>EASIEST : Use the <a href="http://www.citadelonthemove.eu/" target="_blank"><i class="fa fa-icon-external-link"></i> Citadel platform</a></h4>
 <ol>
+	<li><a href="http://www.citadelonthemove.eu/Login">Log in to the plateform</a> (you will need to Register first if you don't have an account yet)</li>
 	<li><a href="http://www.citadelonthemove.eu/opendata/UploadMyDataset/tabid/243/category/EditProperty/language/en-US/Default.aspx" target="_blank"><i class="fa fa-icon-external-link"></i> Publish your converted JSON files</a> to the Citadel datastore</a></li>
-	<li>Use the <a href="http://www.citadelonthemove.eu/en-us/createanapp/applicationgenerationtool.aspx" target="_blank"><i class="fa fa-icon-external-link"></i> Application Generator</a> to make it an app ! (see AGT tutorial)</li>
+	<li>Use the <a href="http://www.citadelonthemove.eu/en-us/createanapp/applicationgenerationtool.aspx" target="_blank"><i class="fa fa-icon-external-link"></i> Application Generator</a> to make it an app ! (see AGT tutorial below for more details)</li>
 </ol>
 
 <h4>EASY : Use the Citadel mobile applications templates on Github</h4>
@@ -76,7 +91,7 @@
 </ol>
 
 
-<h2><a name="examples" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a><i class="fa fa-check-square-o"></i> Examples, use cases and stories</h2>
+<h2 id="examples"><a name="examples" class="anchor" href="#examples"><span class="octicon octicon-link"></span></a><i class="fa fa-check-square-o"></i> Examples, use cases and stories</h2>
 <h3>Examples : live applications</h3>
 <ul>
 	<li><a href="http://www.items.fr/apps/citadel/treefinder-issy/" target="_blank"><i class="fa fa-icon-external-link"></i> Treefinder app for Issy-les-Moulineaux</a></li>
@@ -100,7 +115,7 @@
 <br />
 
 
-<h2><a name="ressources" class="anchor" href="#ressources"><span class="octicon octicon-link"></span></a><i class="fa fa-book"></i> Ressources, templates and documentation</h2>
+<h2 id="ressources"><a name="ressources" class="anchor" href="#ressources"><span class="octicon octicon-link"></span></a><i class="fa fa-book"></i> Ressources, templates and documentation</h2>
 <h3>Project history and details</h3>
 <ul>
 	<li>Check out the <a href="http://www.citadelonthemove.eu/">Citadel on the Move website</a> for a complete and detailed presentation of the project</li>
@@ -119,7 +134,7 @@
 <p>This tool makes it easy to build an app without any technical skill. It is the source code of the tool that is available on Citadel platform.</p>
 <ul>
 	<li><a href="https://github.com/CitadelOnTheMove/agt" target=_new><i class="fa fa-icon-external-link"></i> AGT source code</a></li>
-	<li>< ahref="http://www.citadelonthemove.eu/en-us/createanapp/applicationgenerationtool.aspx" target=_new><i class="fa fa-icon-external-link"></i> Application Generation Tool on Citadel website</a></li>
+	<li><a href="http://www.citadelonthemove.eu/en-us/createanapp/applicationgenerationtool.aspx" target=_new><i class="fa fa-icon-external-link"></i> Application Generation Tool on Citadel website</a></li>
 </ul>
 <h4>The Data converter : converts CSV or Excel datasets to Citadel JSON files that are ready to be used into application templates</h4>
 <ul>
@@ -148,21 +163,35 @@
 		</ul>
 	</li>
 </ul>
-<h3>Spreadsheet samples / template files</h3>
-<p>These templates files can be used to structure your data. It indicates the mandatory and optionnal fields that you need to put into the file so it can produce a valid and usable JSON file through the Converter.</p>
+<h3>Samples files and models</h3>
+<p>These sample files are used in various cases: some can be used to structure your data, while other require different levels of processing, or can be used directly in the templates. The templates sample files indicates the mandatory and optionnal fields that you need to put into a CSV or XLS file so it can produce a valid and usable JSON file through the Converter.</p>
 <p>Note : if you're experiencing troubles with accents, please check your file is encoded in UTF8.</p>
+<p><a href="https://github.com/CitadelOnTheMove/CitadelOnTheMove.github.io/tree/master/examples" target="_blank"><i class="fa fa-icon-external-link"></i> Open samples folder on Github</a></p>
 <ul>
-<li>POIs template : CSV, XLS, Citadel-JSON</li>
-<li>Remarkable trees template : CSV, XLS, Citadel-JSON</li>
-<li>Parking template : CSV, XLS, Citadel-JSON</li>
-<li>Events template : CSV, XLS, Citadel-JSON</li>
-<li>...</li>
+	<li>Sample templates files: use as models to structure your data</li>
+	<ul>
+		<li>POIs template : CSV, XLS</li>
+		<li>Remarkable trees template : CSV, XLS</li>
+		<li>Parking template : CSV, XLS</li>
+		<li>Events template : CSV, XLS</li>
+	</ul>
+	<li>Training input files: demonstrate various uses of the converter. See tutorials for a more detailed description</li>
+	<ul>
+		<li>Sortir le soir à Issy</li>
+	<li>Galleries in Athens</li>
+	<li>Manchester libraries</li>
+	<li>Sportcentres in Ghent</li>
+	</ul>
+	<li>Citadel-Json files: ready-to-use files</li>
+	<ul>
+		<li>Working Citadel-JSON files are provided with every application template. Check for ".json" files in the "data/" folder in their respective Github repository.</li>
+	</ul>
 </ul>
 <br />
 <br />
 
 
-<h2><a name="tutorials" class="anchor" href="#tutorials"><span class="octicon octicon-link"></span></a><i class="fa fa-graduation-cap"></i> Tutorials and How-tos</h2>
+<h2 id="tutorials"><a name="tutorials" class="anchor" href="#tutorials"><span class="octicon octicon-link"></span></a><i class="fa fa-graduation-cap"></i> Tutorials and How-tos</h2>
 <h3>Tutorials</h3>
 <ul class="nobullet">
 	<li><i class="fa fa-file-text-o"></i> Tutorial : <a href="tutorials.html#tutorial1">Prepare your data sheet</a></li>
@@ -188,7 +217,7 @@
 <br />
 
 
-<h2><a name="community" class="anchor" href="#community"><span class="octicon octicon-link"></span></a><i class="fa fa-users"></i> Contribute !</h2>
+<h2 id="community"><a name="community" class="anchor" href="#community"><span class="octicon octicon-link"></span></a><i class="fa fa-users"></i> Contribute !</h2>
 <p>Citadel is always looking for your feedbacks, use case, stories, and to hear about anything that you have made with our tools : please send us your links to your blog posts, mobile applications and other things you've made with Citadel.</p>
 <p>Please use the following channels to get in touch with us:</p>
 <ul>
@@ -212,7 +241,7 @@
 <br />
 
 
-<h2><a name="roadmap" class="anchor" href="#roadmap"><span class="octicon octicon-link"></span></a><i class="fa fa-road"></i> Roadmap</h2>
+<h2 id="roadmap"><a name="roadmap" class="anchor" href="#roadmap"><span class="octicon octicon-link"></span></a><i class="fa fa-road"></i> Roadmap</h2>
 <p>We have many ideas to improve the Citadel toolbox, here's our roadmap for the near future:</p>
 <ul>
 	<li>Add tutorials, examples, comprehensive how-tos...</li>
@@ -220,13 +249,14 @@
 	<li>Facilitate integration of OSM data</li>
 	<li>Develop a library that produces Citadel-JSON (to enable CMS to produce JSON backends)</li>
 	<li>Enable the on-the-fly use the converter</li>
+	<li>Enable the converter to use geoJSON files</li>
 	<li>...</li>
 </ul>
 <br />
 <br />
 
 
-<h2><a name="credits" class="anchor" href="#credits"><span class="octicon octicon-link"></span></a><i class="fa fa-thumbs-o-up"></i> Credits and thanks</h2>
+<h2 id="credits"><a name="credits" class="anchor" href="#credits"><span class="octicon octicon-link"></span></a><i class="fa fa-thumbs-o-up"></i> Credits and thanks</h2>
 <p>Citadel code was funded and opensourced by an european project : see <a href="http://www.citadelonthemove.eu/">Citadel on the Move website</a> for full details</p>
 <p>Thanks to <a href="http://fortawesome.github.io/">Font Awesome</a> for the great iconic font used in these pages.</p>
 <br />
